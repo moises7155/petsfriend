@@ -1,0 +1,15 @@
+Factores que garantizan la calidad en la organizacion ( segun crossby)
+1.- Direccion: contar con personal directivo que maneje y lleve la organizacion en la direccion correcta.
+2.- Equipos de calidad: personas que evaluen la calidad.
+3.- Medir la calidad: evolucion de la calidad en el tiempo.
+4.- Costos de calidad:costo de no hacerlo bien a la primera.
+5.- Conocer el producto o servicio a fondo y ser concientes de defectos y ventajas.
+6.-Acciones correctivas: definir procesos para mejorar la calidad.
+7.- Planificacion del cero defectos: prevenir la ocurrencia de errores.
+8.- Supervisores: Capacitar e incluir en el proceso de calidad.
+9.- Dia de cero defectos: a partir de el se realizaran acciones correctivas.
+10.- Establecer metas: que, como, cuando vamos a mejorar.
+-11.- causas de error: identificar generadores de errores.
+12.- Reconocimiento: ofrecer incentivos y reconocer el trabajo.
+13.- Consejos de calidad. Abrirse al conocer mejores alternativas de mejora.
+14.- Volver a empezar: repetir todos los pasos en cuanto sea necesario.
