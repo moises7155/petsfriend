@@ -3,16 +3,97 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content padding class="animated fadeIn common-bg" padding class="body">
+  <div class="header-banner">
+    <h2>Inicio</h2>
+    <ion-slides class="home-slide" autoplay="5000" loop effect="coverflow">
+      <ion-slide>
+        <ion-card>
+          <img  class="imgRedonda" src="assets/imgs/dog.jpg"/>
+          <div class="card-title">Mejores articulos</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">San Francisco</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">San Francisco</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  </div>
+  <div class="header-banner">
+    <h2>Adopta una mascota</h2>
+    <ion-slides class="home-slide" autoplay="5000" loop effect="coverflow">
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">Mejores articulos</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">San Francisco</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">San Francisco</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  </div>
+  <div class="header-banner">
+    <h2>Animales extraviados</h2>
+    <ion-slides class="home-slide" autoplay="5000" loop effect="coverflow">
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">Mejores articulos</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">San Francisco</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/imgs/dog.jpg"/>
+          <div class="card-title">San Francisco</div>
+          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+      <ion-list inset>
+        <ion-item *ngFor="let user of usuarios">
+          <h2>{{user.id}}</h2>
+          <p>{{user.tipo}}</p>
+        </ion-item>
+      </ion-list>
+
+
+  </div>
 </ion-content>
