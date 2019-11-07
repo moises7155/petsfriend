@@ -11,16 +11,16 @@
   <br>
   <br>
   <div align="center"><img src="../../assets/imgs/perfil.jpg" width="170" height="170"></div>
-  <div>
+  <div *ngFor="let i of usuario">
     <br>
     <h5>Nombre:</h5>
-    <p>Marcela Diaz</p>
+    <p>{{i.nombre}}</p>
     <h5>Fecha de nacimiento:</h5>
-    <p>09 de Agosto de 1990</p>
+    <p>{{i.fecha_nacimiento}}</p>
     <h5>Dirección:</h5>
-    <p>Av. Las Torres #345, Centro.</p>
+    <p>{{i.direccion}}</p>
     <h5>Teléfono:</h5>
-    <p>415-114-8975</p>
+    <p>{{i.telefono}}</p>
 
     <div align="center"><button ion-button color="primario" round>EDITAR</button></div>
 

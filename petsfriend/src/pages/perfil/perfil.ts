@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient} from "@angular/common/http";
+import {RestProvider} from "../../providers/rest/rest";
 
 /**
  * Generated class for the PerfilPage page.
@@ -15,11 +16,18 @@ import { HttpClient} from "@angular/common/http";
   templateUrl: 'perfil.html',
 })
 export class PerfilPage {
-  data:any;
-  usuario: {nombre:'', direccion:'', telefono:'', fecha_nacimiento:''}
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
+  usuario:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+    this.getPerfil();
   }
+  getPerfil() {
+    this.restProvider.getPeril()
+      .then(data => {
+        this.usuario = data;
+        console.log(this.usuario);
+      });
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
