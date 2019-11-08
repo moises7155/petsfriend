@@ -36,6 +36,7 @@ export class LoginPage {
       }
     });
   }
+  // redefinir el nombre de la funció para hacerla
   goHome(){
     this.navCtrl.setRoot(RegistroPage);
   }
