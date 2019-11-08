@@ -5,29 +5,30 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
     <div align="center">
+      <br>
+      <br>
       <img src="../../assets/imgs/logopets.png" alt="20" height="120" >
     </div>
     <br>
     <br>
     <br>
-      <ion-input type="email" placeholder="Correo electrónico"></ion-input>
-      <ion-input type="password" placeholder="Contraseña"></ion-input>
+      <ion-input type="email" placeholder="Correo electrónico" class="letra" [(ngModel)]="user.email"></ion-input>
+      <ion-input type="password" placeholder="Contraseña" class="letra" [(ngModel)]="user.password"></ion-input>
 <div>
   <ion-item>
+    <!--Utilizar padding en lugar de espacios para centrar el texto ya que en un dispositivo con diferente resolución se mueve-->
     <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OLVIDÉ MI CONTRASEÑA</P>
   </ion-item>
 </div>
     <br>
-      <button ion-button block color="primario" class="redondear">CONTINUAR</button>
+      <button ion-button block color="primario" class="redondear" class="letra" (click)="login()">CONTINUAR</button>
     <br>
-    <button (click)="login()"  ion-button block color="light" class="redondear" >REGISTRATE</button>
+    <!--Definir nombres de funcion deacuerdo a su componente-->
+    <button ion-button block color="light" class="redondear" class="letra" (click)="goHome()">REGISTRATE</button>
   </ion-list>
 </ion-content>
