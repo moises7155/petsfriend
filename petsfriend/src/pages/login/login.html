@@ -17,19 +17,25 @@
     <br>
     <br>
     <br>
-      <ion-input type="email" placeholder="Correo electrónico" class="letra"></ion-input>
-      <ion-input type="password" placeholder="Contraseña" class="letra"></ion-input>
+      <ion-input type="email" placeholder="Correo electrónico" class="letra" [(ngModel)]="user.email"></ion-input>
+      <ion-input type="password" placeholder="Contraseña" class="letra" [(ngModel)]="user.password"></ion-input>
 <div>
   <ion-item>
+    <!--Utilizar padding en lugar de espacios para centrar el texto ya que en un dispositivo con diferente resolución se mueve-->
     <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OLVIDÉ MI CONTRASEÑA</P>
   </ion-item>
 </div>
     <br>
-      <button ion-button block color="primario" class="redondear" class="letra">CONTINUAR</button>
+      <button ion-button block color="primario" class="redondear" class="letra" (click)="login()">CONTINUAR</button>
     <br>
+<<<<<<< HEAD
 
 
     <button (click)="login()"  ion-button block color="light" class="redondear" >REGISTRATE</button>
 
+=======
+    <!--Definir nombres de funcion deacuerdo a su componente-->
+    <button ion-button block color="light" class="redondear" class="letra" (click)="goHome()">REGISTRATE</button>
+>>>>>>> 8d8cc6421f42be36d2813369aa1b4b1fd7b74df6
   </ion-list>
 </ion-content>
