@@ -2,15 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {LoginPage} from "../pages/login/login";
-<<<<<<< HEAD
 import {PerfilPage} from "../pages/perfil/perfil";
-=======
 import {TabsPage} from "../pages/tabs/tabs";
->>>>>>> 00c51fa6970938635f2c451dfc824295d536d3e5
+
 
 @Component({
   templateUrl: 'app.html'
