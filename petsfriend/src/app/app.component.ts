@@ -7,10 +7,7 @@ import { ListPage } from '../pages/list/list';
 import {LoginPage} from "../pages/login/login";
 import {PerfilPage} from "../pages/perfil/perfil";
 import {TabsPage} from "../pages/tabs/tabs";
-<<<<<<< HEAD
 
-=======
->>>>>>> 8d8cc6421f42be36d2813369aa1b4b1fd7b74df6
 
 @Component({
   templateUrl: 'app.html'
