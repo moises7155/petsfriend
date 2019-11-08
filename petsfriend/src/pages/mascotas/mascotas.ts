@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {RestProvider} from "../../providers/rest/rest";
 
 /**
  * Generated class for the MascotasPage page.
@@ -14,10 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'mascotas.html',
 })
 export class MascotasPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  mascota:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+    this.getMascota();
   }
-
+  getMascota() {
+    this.restProvider.getMascota()
+      .then(data => {
+        this.mascota = data;
+        console.log(this.mascota);
+      });
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MascotasPage');
   }

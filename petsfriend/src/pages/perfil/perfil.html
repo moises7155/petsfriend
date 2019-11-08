@@ -6,11 +6,10 @@
 -->
 <ion-header>
 </ion-header>
-
 <ion-content padding>
+  <h4>Perfil</h4>
   <br>
-  <br>
-  <div align="center"><img src="../../assets/imgs/perfil.jpg" width="170" height="170"></div>
+  <div align="center"><img src="../../assets/imgs/perfil.jpg" width="110" height="110"></div>
   <div *ngFor="let i of usuario">
     <br>
     <h5>Nombre:</h5>
@@ -22,7 +21,7 @@
     <h5>Teléfono:</h5>
     <p>{{i.telefono}}</p>
 
-    <div align="center"><button ion-button color="primario" round>EDITAR</button></div>
+    <div align="center"><button ion-button color="tabs" round>MODIFICAR</button></div>
 
   </div>
 </ion-content>
