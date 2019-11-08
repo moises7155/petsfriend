@@ -9,28 +9,17 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <img src="../../assets/imgs/perro.jpg" height="170" width="300">
+  <ion-card *ngFor="let i of mascota" class="imagen">
+    <img src={{i.foto}}>
     <ion-card-content>
-      <!--<ion-card-title>
-        Nine Inch Nails Live
-      </ion-card-title>-->
-      <h2>Nombre: Doggo</h2>
-      <h2>Edad: 3 años</h2>
-      <h2>Raza: Dsconocida</h2>
-
+      <h2>Nombre: {{i.nombre}} </h2>
+      <h2>Edad: {{i.edad}}</h2>
+      <h2>Genero: {{i.genero}}</h2>
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <img src="../../assets/imgs/gato.jpg"/>
-    <ion-card-content>
-      <!--<ion-card-title>
-        Nine Inch Nails Live
-      </ion-card-title>-->
-      <h2>Nombre: Menino</h2>
-      <h2>Edad: 1 año</h2>
-      <h2>Raza: Dsconocida</h2>
-
-    </ion-card-content>
-  </ion-card>
+  <ion-fab bottom center mini >
+    <button ion-fab color="tabs">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

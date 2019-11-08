@@ -1,6 +1,7 @@
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
 /*
   Generated class for the RestProvider provider.
 
@@ -28,7 +29,15 @@ export class RestProvider {
 
   getPeril() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + '/usuario').subscribe(data => {
+      this.http.get(this.apiUrl + '/usuario/4').subscribe(data => {
+        resolve(data);
+        console.log(data);
+      })
+    })
+  }
+  getMascota() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/mascota').subscribe(data => {
         resolve(data);
         console.log(data);
       })
