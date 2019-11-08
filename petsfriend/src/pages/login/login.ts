@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegistroPage } from '../registro/registro';
-import {HomePage} from "../home/home";
 import {TabsPage} from "../tabs/tabs";
+import { AngularFireAuth} from "@angular/fire/auth";
 
 /**
  * Generated class for the LoginPage page.
@@ -17,8 +17,8 @@ import {TabsPage} from "../tabs/tabs";
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {email: '', password: ''};
+  constructor(public navCtrl: NavController, public navParams: NavParams, public Afauth: AngularFireAuth) {
   }
 
   ionViewDidLoad() {
@@ -26,10 +26,18 @@ export class LoginPage {
   }
 
   login(){
-    this.navCtrl.setRoot(RegistroPage);
+    this.Afauth.auth.signInWithEmailAndPassword(this.user.email, this.user.password).then((auth) =>{
+      this.navCtrl.setRoot(TabsPage);
+    }, error => {
+      if(error.code === 'auth/wrong-password'){
+        alert('Error contraseña');
+      }else{
+        alert('Error correo')
+      }
+    });
   }
   goHome(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot(RegistroPage);
   }
 
 }

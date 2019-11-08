@@ -15,6 +15,21 @@ import { HttpClientModule} from "@angular/common/http";
 import { RestProvider } from '../providers/rest/rest';
 import {MascotasPage} from "../pages/mascotas/mascotas";
 
+//Firebase auth
+import { AngularFireModule} from "@angular/fire";
+import { AngularFireAuthModule} from "@angular/fire/auth";
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCcJrNTguejOc8r93Z6cgdLkyqeS2gSsuE",
+  authDomain: "petsfriend-256b5.firebaseapp.com",
+  databaseURL: "https://petsfriend-256b5.firebaseio.com",
+  projectId: "petsfriend-256b5",
+  storageBucket: "petsfriend-256b5.appspot.com",
+  messagingSenderId: "187257842276",
+  appId: "1:187257842276:web:bd6add1a7ae5948f484d71"
+};
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +45,9 @@ import {MascotasPage} from "../pages/mascotas/mascotas";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+   AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
