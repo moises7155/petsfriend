@@ -1,4 +1,4 @@
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
@@ -26,6 +26,17 @@ export class RestProvider {
       })
     });
   }
+  addUser(data){
+    return new Promise((resolve, reject) => {
+      this.http.post(this.apiUrl+'/usuario', JSON.stringify(data))
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
 
   getPeril() {
     return new Promise(resolve => {
