@@ -18,9 +18,9 @@ export class RestProvider {
     console.log('Hello RestProvider Provider');
   }
 
-  getUsers() {
+  getRecomendacion() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + '/especie').subscribe(data => {
+      this.http.get(this.apiUrl + '/recomendacion').subscribe(data => {
         resolve(data);
         console.log(data);
       })
@@ -36,8 +36,6 @@ export class RestProvider {
         });
     });
   }
-
-
   getPeril() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/usuario/4').subscribe(data => {

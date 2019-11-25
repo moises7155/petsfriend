@@ -8,10 +8,13 @@ import { RestProvider } from '../../providers/rest/rest';
 export class HomePage {
   usuarios : any;
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
-      this.getUsers();
+
   }
-  getUsers() {
-    this.restProvider.getUsers()
+  ngOninit(){
+    this.getRecomendacion();
+  }
+  getRecomendacion() {
+    this.restProvider.getRecomendacion()
       .then(data => {
         this.usuarios = data;
         console.log(this.usuarios);
