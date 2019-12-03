@@ -6,8 +6,7 @@ import {FavoritosPage} from "../favoritos/favoritos";
 import {LoginPage} from "../login/login";
 import {PerfilPage} from "../perfil/perfil";
 import {MascotasPage} from "../mascotas/mascotas";
-
-
+import {PerfilmascotaPage} from "../perfilmascota/perfilmascota";
 
 @IonicPage()
 @Component({
@@ -22,6 +21,6 @@ export class TabsPage {
  loginPage = LoginPage;
  perfilPage = PerfilPage;
  mascotasPage = MascotasPage;
-
+ perfilmascotaPage = PerfilmascotaPage;
 
 }

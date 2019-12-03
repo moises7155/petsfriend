@@ -4,24 +4,24 @@ import {RestProvider} from "../../providers/rest/rest";
 
 @IonicPage()
 @Component({
-  selector: 'page-perfil',
-  templateUrl: 'perfil.html',
+  selector: 'page-perfilmascota',
+  templateUrl: 'perfilmascota.html',
 })
-export class PerfilPage {
-  usuario:any;
+export class PerfilmascotaPage {
+  Pmascota:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
-    this.getPerfil();
+  this.getMascotas();
   }
-  getPerfil() {
-    this.restProvider.getPeril()
+
+  getMascotas() {
+    this.restProvider.getMascotas()
       .then(data => {
-        this.usuario = data;
-        console.log(this.usuario);
+        this.Pmascota = data;
+        console.log(this.Pmascota);
       });
   }
-
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilPage');
+    console.log('ionViewDidLoad PerfilmascotaPage');
   }
 }
