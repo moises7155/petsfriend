@@ -5,19 +5,18 @@
   Ionic pages and navigation.
 -->
 <ion-header>
- <h4>Mis mascotas</h4>
+ <h4 class="letra">Mis mascotas</h4>
 </ion-header>
-
 <ion-content padding>
   <ion-card *ngFor="let i of mascota" class="imagen">
     <img src={{i.foto}} height="150" width="400">
     <ion-card-content>
-      <h2>Nombre: {{i.nombre}} </h2>
-      <h2>Edad: {{i.edad}}</h2>
-      <h2>Genero: {{i.genero}}</h2>
+      <h2>Nombre:<span style="font-family:'Arial Black'; color: black">{{i.nombre}}</span> </h2>
+      <h2>Edad: <span style="font-family:'Arial Black'; color: black">{{i.edad}}</span></h2>
+      <h2>Genero: <span style="font-family:'Arial Black'; color: black">{{i.genero}}</span> </h2>
     </ion-card-content>
   </ion-card>
-  <ion-fab bottom center mini >
+  <ion-fab bottom center mini>
     <button ion-fab color="tabs">
       <ion-icon name="add"></ion-icon>
     </button>

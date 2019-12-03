@@ -17,7 +17,7 @@ import { AngularFireAuth} from "@angular/fire/auth";
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  user = {email: '', password: ''};
+  user = {id:'',email: '', password: ''};
   constructor(public navCtrl: NavController, public navParams: NavParams, public Afauth: AngularFireAuth) {
   }
 
@@ -40,5 +40,4 @@ export class LoginPage {
   goHome(){
     this.navCtrl.setRoot(RegistroPage);
   }
-
 }

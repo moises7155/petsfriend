@@ -15,10 +15,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule} from "@angular/common/http";
 import {MascotasPage} from "../pages/mascotas/mascotas";
+import {EditarperfilPage} from "../pages/editarperfil/editarperfil";
+
 
 //Firebase auth
 import { AngularFireModule} from "@angular/fire";
 import { AngularFireAuthModule} from "@angular/fire/auth";
+import {EditarperfilPageModule} from "../pages/editarperfil/editarperfil.module";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCcJrNTguejOc8r93Z6cgdLkyqeS2gSsuE",
@@ -49,7 +52,8 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     HttpClientModule,
    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    EditarperfilPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,7 +66,8 @@ export const firebaseConfig = {
     TabsPage,
     RegistroPage,
     FavoritosPage,
-    MascotasPage
+    MascotasPage,
+    EditarperfilPage
   ],
   providers: [
     StatusBar,
