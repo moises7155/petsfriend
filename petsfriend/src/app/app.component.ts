@@ -3,9 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ListPage } from '../pages/list/list';
-import {LoginPage} from "../pages/login/login";
 import {TabsPage} from "../pages/tabs/tabs";
-
+import { HomePage } from "../pages/home/home";
 
 @Component({
   templateUrl: 'app.html'
