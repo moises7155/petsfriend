@@ -26,6 +26,14 @@ export class RestProvider {
       })
     });
   }
+  getAnuncio() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/anuncio').subscribe(data => {
+        resolve(data);
+        console.log(data);
+      })
+    });
+  }
   addUser(data){
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl+'/usuario', JSON.stringify(data))
@@ -52,5 +60,6 @@ export class RestProvider {
       })
     })
   }
+
 }
 
