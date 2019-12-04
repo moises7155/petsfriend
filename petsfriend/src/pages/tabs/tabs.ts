@@ -8,7 +8,6 @@ import {PerfilPage} from "../perfil/perfil";
 import {MascotasPage} from "../mascotas/mascotas";
 
 
-
 @IonicPage()
 @Component({
   selector: 'page-tabs',
@@ -22,6 +21,6 @@ export class TabsPage {
  loginPage = LoginPage;
  perfilPage = PerfilPage;
  mascotasPage = MascotasPage;
-
+ 
 
 }

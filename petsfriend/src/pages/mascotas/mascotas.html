@@ -9,7 +9,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let i of mascota" class="imagen">
+  <ion-card *ngFor="let i of mascota" (click)="descripcion()" (click)="obtenerid(i.id)" class="imagen">
     <img src={{i.foto}} height="150" width="400">
     <ion-card-content>
       <h2>Nombre: {{i.nombre}} </h2>

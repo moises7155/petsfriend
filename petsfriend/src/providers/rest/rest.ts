@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
 export class RestProvider {
 
   apiUrl = 'http://petsfriend.herokuapp.com';
-
+  refe = localStorage.getItem('Perfilmascota');
 
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
@@ -52,6 +52,7 @@ export class RestProvider {
       })
     })
   }
+
   getMascota() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/mascota').subscribe(data => {
@@ -60,6 +61,13 @@ export class RestProvider {
       })
     })
   }
-
+  getMascotas() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/mascota/' + this.refe).subscribe(data => {
+        resolve(data);
+        console.log(data);
+      })
+    })
+  }
 }
 

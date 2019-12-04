@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {RestProvider} from "../../providers/rest/rest";
-
-/**
- * Generated class for the MascotasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {PerfilmascotaPage} from "../perfilmascota/perfilmascota";
 
 @IonicPage()
 @Component({
@@ -26,8 +20,15 @@ export class MascotasPage {
         console.log(this.mascota);
       });
   }
+  descripcion(){
+    this.navCtrl.push(PerfilmascotaPage);
+  }
+  obtenerid(id) {
+    this.mascota.id = id;
+    localStorage.setItem('Perfilmascota', this.mascota.id);
+  } 
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad MascotasPage');
   }
-
 }

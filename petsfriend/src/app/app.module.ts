@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule} from "@angular/common/http";
 import {MascotasPage} from "../pages/mascotas/mascotas";
+import {PerfilmascotaPage} from "../pages/perfilmascota/perfilmascota";
 
 //Firebase auth
 import { AngularFireModule} from "@angular/fire";
@@ -42,7 +43,8 @@ export const firebaseConfig = {
     PerfilPage,
     PruebaPage,
     RegistroPage,
-    MascotasPage
+    MascotasPage,
+    PerfilmascotaPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ export const firebaseConfig = {
     TabsPage,
     RegistroPage,
     FavoritosPage,
-    MascotasPage
+    MascotasPage,
+    PerfilmascotaPage
   ],
   providers: [
     StatusBar,
