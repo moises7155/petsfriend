@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {RestProvider} from "../../providers/rest/rest";
 import {PerfilmascotaPage} from "../perfilmascota/perfilmascota";
+import {AgregarMascotaPage} from "../agregar-mascota/agregar-mascota";
 
 @IonicPage()
 @Component({
@@ -21,14 +22,18 @@ export class MascotasPage {
       });
   }
   descripcion(){
-    this.navCtrl.push(PerfilmascotaPage);
+    this.navCtrl.push('PerfilmascotaPage')
   }
   obtenerid(id) {
     this.mascota.id = id;
     localStorage.setItem('Perfilmascota', this.mascota.id);
-  } 
+  }
+  goAgregarMascota(){
+    this.navCtrl.push(AgregarMascotaPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MascotasPage');
   }
+
 }

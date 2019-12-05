@@ -1,0 +1,20 @@
+page-agregar-mascota {
+  input[type=email] , input[type=password], input[type=text]{
+    border-radius: 8px;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+    width: 100%;
+    border: 2px solid #7B1FA2;
+    transition: all 0.5 ease-in-out;
+    height: 45px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .redondear{
+    border-radius: 15px;
+  }
+}

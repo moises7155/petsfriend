@@ -17,12 +17,14 @@ import { HttpClientModule} from "@angular/common/http";
 import {MascotasPage} from "../pages/mascotas/mascotas";
 import {EditarperfilPage} from "../pages/editarperfil/editarperfil";
 import {PerfilmascotaPage} from "../pages/perfilmascota/perfilmascota";
+import {AgregarMascotaPage} from "../pages/agregar-mascota/agregar-mascota";
 
 
 //Firebase auth
 import { AngularFireModule} from "@angular/fire";
 import { AngularFireAuthModule} from "@angular/fire/auth";
 import {EditarperfilPageModule} from "../pages/editarperfil/editarperfil.module";
+import {PerfilmascotaPageModule} from "../pages/perfilmascota/perfilmascota.module";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCcJrNTguejOc8r93Z6cgdLkyqeS2gSsuE",
@@ -47,7 +49,7 @@ export const firebaseConfig = {
     PruebaPage,
     RegistroPage,
     MascotasPage,
-    PerfilmascotaPage
+    AgregarMascotaPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ export const firebaseConfig = {
     HttpClientModule,
    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    EditarperfilPageModule
+    EditarperfilPageModule,
+    PerfilmascotaPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -71,6 +74,7 @@ export const firebaseConfig = {
     MascotasPage,
     EditarperfilPage,
     PerfilmascotaPage,
+    AgregarMascotaPage
   ],
   providers: [
     StatusBar,
