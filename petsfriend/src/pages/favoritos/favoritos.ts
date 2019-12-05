@@ -15,11 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FavoritosPage {
 
+  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FavoritosPage');
   }
+  Color(){
+    var favoritos = document.getElementById('favoritos');
+    favoritos.classList.toggle('red');    
+   }
+
 
 }
