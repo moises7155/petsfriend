@@ -14,7 +14,12 @@ export class RestProvider {
 
   apiUrl = 'http://petsfriend.herokuapp.com';
   refe = localStorage.getItem('Perfilmascota');
+<<<<<<< HEAD
   constructor(public http: HttpClient, private auth: AngularFireAuth,) {
+=======
+
+  constructor(public http: HttpClient) {
+>>>>>>> 22585f43146c41e82859ec34590f021703d3a4a0
     console.log('Hello RestProvider Provider');
   }
 
@@ -26,12 +31,24 @@ export class RestProvider {
       })
     });
   }
+<<<<<<< HEAD
   addUser(usuario){
 
     //console.log("DATA" + JSON.stringify(usuario));
 
     console.log("DATA::: " + usuario);
 
+=======
+  getAnuncio() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/anuncio').subscribe(data => {
+        resolve(data);
+        console.log(data);
+      })
+    });
+  }
+  addUser(data){
+>>>>>>> 22585f43146c41e82859ec34590f021703d3a4a0
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl+'/usuario', usuario)
         .subscribe(res => {
