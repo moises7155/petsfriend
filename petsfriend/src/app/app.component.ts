@@ -4,10 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ListPage } from '../pages/list/list';
 import {TabsPage} from "../pages/tabs/tabs";
-<<<<<<< HEAD
-=======
 import { HomePage } from "../pages/home/home";
->>>>>>> 22585f43146c41e82859ec34590f021703d3a4a0
 import {LoginPage} from "../pages/login/login";
 
 @Component({
