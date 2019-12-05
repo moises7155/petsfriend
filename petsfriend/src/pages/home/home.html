@@ -23,6 +23,7 @@
           <div class="card-title" class="le">{{a.descripcion}}</div>
           <h2>{{a.especie}} {{a.genero}} de  {{a.edad}} años </h2>  
           <div><ion-icon id="adoptar" (click)="AdopColor()" name="heart"></ion-icon> </div>    
+
         </ion-card>
       </ion-slide>
     </ion-slides>
@@ -31,6 +32,7 @@
 
   <div class="header-banner">
     <h2 class="co">Animales extraviadas</h2>
+    <!--
     <ion-slides class="home-slide"  *ngIf="anuncio && anuncio.length" autoplay="800"  loop>
       <ion-slide *ngFor="let b of anuncio">
         <ion-card class="imgRedonda">
@@ -41,5 +43,36 @@
         </ion-card>
       </ion-slide>
     </ion-slides>
+    -->
+
+    <ion-slides class="home-slide" autoplay="800"  loop>
+      <ion-slide >
+        <ion-card class="imgRedonda">
+          <p><img src="../../assets/imgs/retriever.jpg" class="imgRedonda" alt="10" width="10" height="5"/></p>
+          <div class="card-title" class="le">Rocky</div>
+          <h2 class="alinea"> Se extravio cerca de la tecnica,llevaba una correa color verde, es muy docil</h2>
+
+        </ion-card>
+      </ion-slide>
+      <ion-slide >
+        <ion-card class="imgRedonda">
+          <p><img src="../../assets/imgs/raza-pastor-australiano.jpg" class="imgRedonda" alt="10" width="10" height="5"/></p>
+          <div class="card-title" class="le">Chocolata</div>
+          <h2 class="alinea"> Se extravio cerca de el instituto San miguelensee,llevaba una correa color verde, es muy docil y muy juguetona</h2>
+
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide >
+        <ion-card class="imgRedonda">
+          <p><img src="../../assets/imgs/unmichi.jpg" class="imgRedonda" alt="10" width="10" height="5"/></p>
+          <div class="card-title" class="le">Tom</div>
+          <h2 class="alinea"> Se extravio cerca de la colonia insurgentes,llevaba una correa color verde, es muy docil y muy juguetona</h2>
+
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+
   </div>
 </ion-content>

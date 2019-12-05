@@ -40,5 +40,4 @@ export class LoginPage {
   goHome(){
     this.navCtrl.setRoot(RegistroPage);
   }
-
 }

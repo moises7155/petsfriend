@@ -12,21 +12,22 @@
 <br>
 <br>
   <br>
-      <ion-input type="text" id="nombre" placeholder="Nombre completo" name="nombre" [(ngModel)] = "users.nombre"></ion-input>
-      <ion-input type="text" id="direccion" placeholder="Correo electronico" name="correo" [(ngModel)] = "users.direccion"></ion-input>
-      <ion-input type="text" id="telefono" placeholder="Contraseña" name="contrasena" [(ngModel)] = "users.telefono"></ion-input>
-      <ion-input type="text" id="fecha_nacimiento" placeholder="Edad" name="edad" [(ngModel)] = "users.fecha_nacimiento" ></ion-input>
+      <ion-input type="text" id="nombre" placeholder="Nombre completo" name="nombre"[(ngModel)]="usuario.nombre" ></ion-input>
+      <ion-input type="date" id="fecha_nacimiento"  name="fecha_nacimiento" [(ngModel)] = "usuario.fecha_nacimiento" ></ion-input>
+      <ion-input type="text" id="direccion" placeholder="Dirección" name="direccion" [(ngModel)] = "usuario.direccion"></ion-input>
+      <ion-input type="tel" id="telefono" placeholder="Teléfono" name="telefono" [(ngModel)] = "usuario.telefono"></ion-input>
+      <ion-input type="email" id="email" placeholder="Correo electronico" name="email" [(ngModel)] = "user.email"></ion-input>
+      <ion-input type="password" id="password" placeholder="Contraseña" name="password" [(ngModel)] = "user.password"></ion-input>
       <!--<ion-input type="email" placeholder="Correo electrónico"></ion-input>
       <ion-input type="password" placeholder="Contraseña"></ion-input>-->
-    <br> 
-    <br> 
-    <br> 
-    <br>      
-    <button ion-button block color="primario" class="redondear"  (click)="gologin()" >Continuar</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button ion-button block color="primario" class="redondear"  (click)="signup()">Continuar</button>
     <div>
   <ion-item>
     <!--<P style="padding: 15%">YA TENGO CUENTA</P>-->
-
    <button ion-button block color="light" class="redondear" (click)="gologin()">Ya tengo cuenta</button>
   </ion-item>
 </div>
