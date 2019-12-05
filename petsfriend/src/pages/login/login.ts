@@ -17,7 +17,7 @@ import { AngularFireAuth} from "@angular/fire/auth";
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  user = {id:'',email: '', password: ''};
+  user = {email: '', password: ''};
   constructor(public navCtrl: NavController, public navParams: NavParams, public Afauth: AngularFireAuth) {
   }
 

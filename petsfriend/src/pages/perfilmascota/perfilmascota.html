@@ -1,0 +1,24 @@
+
+<ion-header>
+</ion-header>
+<ion-content padding>
+  <h4>Mis mascotas</h4>
+  <br>
+  <div *ngFor="let i of Pmascota">
+    <br>
+    <img src="{{i.foto}}" width="500" height="200">
+    <h5>Nombre:</h5>
+    <p>{{i.nombre}}</p>
+    <h5>Edad:</h5>
+    <p>{{i.edad}}</p>
+    <h5>Genero:</h5>
+    <p>{{i.genero}}</p>
+        
+    <div align="center"><button ion-button color="tabs" round>MODIFICAR</button></div>
+
+  </div>
+</ion-content>
+
+
+
+

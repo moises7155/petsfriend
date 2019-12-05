@@ -16,6 +16,7 @@ import { RestProvider } from '../providers/rest/rest';
 import { HttpClientModule} from "@angular/common/http";
 import {MascotasPage} from "../pages/mascotas/mascotas";
 import {EditarperfilPage} from "../pages/editarperfil/editarperfil";
+import {PerfilmascotaPage} from "../pages/perfilmascota/perfilmascota";
 
 
 //Firebase auth
@@ -45,7 +46,8 @@ export const firebaseConfig = {
     PerfilPage,
     PruebaPage,
     RegistroPage,
-    MascotasPage
+    MascotasPage,
+    PerfilmascotaPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ export const firebaseConfig = {
     RegistroPage,
     FavoritosPage,
     MascotasPage,
-    EditarperfilPage
+    EditarperfilPage,
+    PerfilmascotaPage,
   ],
   providers: [
     StatusBar,

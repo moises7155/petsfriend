@@ -1,6 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { AngularFireAuth} from "@angular/fire/auth";
+import * as firebase from 'firebase/app';
 
 /*
   Generated class for the RestProvider provider.
@@ -12,43 +13,56 @@ import { Injectable } from '@angular/core';
 export class RestProvider {
 
   apiUrl = 'http://petsfriend.herokuapp.com';
-
-
-  constructor(public http: HttpClient) {
+  refe = localStorage.getItem('Perfilmascota');
+  constructor(public http: HttpClient, private auth: AngularFireAuth,) {
     console.log('Hello RestProvider Provider');
   }
 
-  getUsers() {
+  getRecomendacion() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + '/especie').subscribe(data => {
+      this.http.get(this.apiUrl + '/recomendacion').subscribe(data => {
         resolve(data);
         console.log(data);
       })
     });
   }
-  addUser(data){
+  addUser(usuario){
+
+    //console.log("DATA" + JSON.stringify(usuario));
+
+    console.log("DATA::: " + usuario);
+
     return new Promise((resolve, reject) => {
-      this.http.post(this.apiUrl+'/usuario', JSON.stringify(data))
+      this.http.post(this.apiUrl+'/usuario', usuario)
         .subscribe(res => {
           resolve(res);
         }, (err) => {
           reject(err);
         });
     });
+
   }
-
-
   getPeril() {
+    let user =firebase.auth().currentUser.uid;
     return new Promise(resolve => {
-      this.http.get(this.apiUrl + '/usuario/4').subscribe(data => {
+      this.http.get(this.apiUrl + '/usuario'+'/'+user).subscribe(data => {
         resolve(data);
         console.log(data);
       })
     })
   }
+
   getMascota() {
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/mascota').subscribe(data => {
+        resolve(data);
+        console.log(data);
+      })
+    })
+  }
+  getMascotas() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl + '/mascota/' + this.refe).subscribe(data => {
         resolve(data);
         console.log(data);
       })

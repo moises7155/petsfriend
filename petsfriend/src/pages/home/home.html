@@ -1,96 +1,43 @@
-<!--<ion-header>-->
-  <!--<ion-navbar>-->
-    <!--&lt;!&ndash;<button ion-button menuToggle>-->
-      <!--<ion-icon name="menu"></ion-icon>-->
-    <!--</button>&ndash;&gt;-->
-  <!--</ion-navbar>-->
-<!--</ion-header>-->
-
-<ion-content padding class="animated fadeIn common-bg" padding class="body">
-  <div class="header-banner">
-    <h2>Inicio</h2>
-    <ion-slides class="home-slide" autoplay="5000" loop effect="coverflow">
+<ion-content padding class="animated fadeIn common-bg" padding class="body" >
+  <div class="header-banner" >
+    <h2 class="co">Inicio</h2>
+    <ion-slides class="home-slide" autoplay="5000" *ngFor="let i of usuarios" >
       <ion-slide>
-        <ion-card>
-          <img  class="imgRedonda" src="assets/imgs/dog.jpg"/>
-          <div class="card-title">Mejores articulos</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">San Francisco</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">San Francisco</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
+        <ion-card class="imgRedonda" >
+          <img src="{{i.foto}}" class="imgRedonda"/>
+          <div class="card-title" class="le">{{i.titulo}}</div>
+            <p class="alinea">
+             {{i.descripcion}}, compralo en : {{i.link}}
+            </p>
         </ion-card>
       </ion-slide>
     </ion-slides>
-
   </div>
-  <div class="header-banner">
-    <h2>Adopta una mascota</h2>
-    <ion-slides class="home-slide" autoplay="5000" loop effect="coverflow">
-      <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">Mejores articulos</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">San Francisco</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">San Francisco</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
-        </ion-card>
-      </ion-slide>
-    </ion-slides>
 
-  </div>
   <div class="header-banner">
-    <h2>Animales extraviados</h2>
-    <ion-slides class="home-slide" autoplay="5000" loop effect="coverflow">
+    <h2 class="co">Adopta una mascota</h2>
+    <ion-slides class="home-slide" autoplay="5000" loop>
       <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
+        <ion-card class="imgRedonda">
+          <p><img src="assets/imgs/dog.jpg" class="imgRedonda" width="5%" height="65"/></p>
           <div class="card-title">Mejores articulos</div>
           <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
         </ion-card>
       </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <div class="header-banner">
+    <h2 class="co">Animales extraviadas</h2>
+    <ion-slides class="home-slide" autoplay="5000" loop>
       <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">San Francisco</div>
-          <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <img src="assets/imgs/dog.jpg"/>
-          <div class="card-title">San Francisco</div>
+        <ion-card class="imgRedonda">
+          <p><img src="assets/imgs/dog.jpg" class="imgRedonda" width="5%" height="65"/></p>
+          <div class="card-title">Mejores articulos</div>
           <div class="card-subtitle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen</div>
         </ion-card>
       </ion-slide>
     </ion-slides>
-      <ion-list inset>
-        <ion-item *ngFor="let user of usuarios">
-          <h2>{{user.id}}</h2>
-          <p>{{user.tipo}}</p>
-        </ion-item>
-      </ion-list>
   </div>
 </ion-content>
