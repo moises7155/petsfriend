@@ -9,6 +9,7 @@
             <h2 class="alinea">
              {{i.descripcion}}, compralo en : {{i.link}}
             </h2>
+            <div><ion-icon id="heart" (click)="ChangeColor()" name="heart"></ion-icon> </div>
         </ion-card>
       </ion-slide>
     </ion-slides>
@@ -20,7 +21,9 @@
         <ion-card class="imgRedonda">
           <p><img src={{a.foto}} class="imgRedonda" width="5%" height="65"/></p>
           <div class="card-title" class="le">{{a.descripcion}}</div>
-          <h2 class="alinea">{{a.especie}} {{a.genero}} de  {{a.edad}} años </h2>
+          <h2>{{a.especie}} {{a.genero}} de  {{a.edad}} años </h2>  
+          <div><ion-icon id="adoptar" (click)="AdopColor()" name="heart"></ion-icon> </div>    
+
         </ion-card>
       </ion-slide>
     </ion-slides>

@@ -39,4 +39,16 @@ export class HomePage {
         console.log(this.anuncio);
       });
   }
+  ChangeColor(){
+    var heart = document.getElementById('heart');
+    heart.classList.toggle('red');    
+   }
+  AdopColor(){
+    var adoptar = document.getElementById('adoptar');
+    adoptar.classList.toggle('red');    
+   }
+  //  colorAdop(){
+  //   var heartA = document.getElementById('heartAdop');
+  //   heartA.classList.toggle('red');    
+  //  }
 }
